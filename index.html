@@ -1,0 +1,57 @@
+<!--PI Calculator Range Slider-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PI Calculator</title>
+    <link rel="stylesheet" href="pi_calculator.css">
+</head>
+<body>
+    <form id="injury_calculator" name="injury_calculator">
+        <div class="pi-calculator-wrapper col-md-12">
+            <div class="content-wrapper">
+                <div class="pi-calculator-title">
+                    <div class="title clearfix">
+                        Enter Your Estimate Damages
+                    </div>
+                </div>
+                <div class="pi-damages">
+                    <label for="medical-expenses">Medical Expenses</label>
+                    <span class="label1">$ <input type="number" id="input1" min="0" max="100000"></input></span>
+                    <input id="field1" name="field1" type="range" min="0" max="100000" value="0" data-rangeslider>
+
+                    <label for="vehicle-damage">Vehicle Damage</label>
+                    <span class="label2">$ <input type="number" id="input2" min="0" max="50000"></input></span>
+                    <input id="field2" name="field2" type="range" min="0" max="50000" value="0" data-rangeslider>
+
+                    <label for="lost-income">Lost Income</label>
+                    <span class="label3">$ <input type="number" id="input3" min="0" max="25000"></input></span>
+                    <input id="field3" name="field3" type="range" min="0" max="25000" value="0" data-rangeslider>
+
+                    <label for="rental-vehicle-cost">Rental Vehicle Cost</label>
+                    <span class="label4">$ <input type="number" id="input4" min="0" max="3000"></input></span>
+                    <input id="field4" name="field4" type="range" min="0" max="3000" value="0" data-rangeslider>
+                </div>
+                
+                <input id="calculate-settlement" onclick="settlement(injury_calculator)" type="button" value="Calculate Settlement">
+                
+                <div align="center" class="col-md-12" id="EstimateResult" style="display: block;">
+                    <!-- Green Panel -->
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-tasks"></i>Your Settlement Estimate</h4>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Total Financial Damages: <label for="sum" id="sum"></label></h4><br>
+                            <h4>Your Personal Injury Settlement is Worth Between:<br>
+                            <br>
+                            <label for="low" id="low"></label> and <label for="high" id="high"></label></h4>
+                        </div>
+                    </div><!-- End Green Panel -->
+                </div>
+            </div>
+        </div>
+    </form><!--END PI Calculator Range Slider-->
+    
+    <script src="pi_calculator.js"></script>
+</body>
+</html>
