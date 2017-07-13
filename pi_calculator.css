@@ -1,0 +1,187 @@
+/*
+Colors
+Blue: #3498db
+Green: #64c832
+Orange: #ff9600
+Red: #3498db
+Grey: #93a8a9
+*/
+
+.pi-calculator-wrapper {
+    padding-top: 30px;
+    border: 1px solid #93a8a9;
+    margin-bottom: 30px;
+}
+
+.content-wrapper {
+    display: block;
+    max-width: 600px;
+    margin: auto;
+}
+
+.pi-calculator-title .title {
+    color: #3498db;
+    font-size: 24px;
+    font-weight:700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pi-damages label {
+    font-size: 16px;
+    font-weight: normal;
+}
+.pi-damages span {
+    float: right;
+}
+.pi-damages input {
+    width: 70px;
+    border: 1px solid #222;
+    border-radius: 15% !important;
+}
+
+
+.label1, .label2, .label3, .label4 {
+    color:#222;
+    font-size: 16px;
+}
+
+
+/* ====
+Range Slider
+================*/
+.rangeslider,
+.rangeslider__fill {
+    display:block;
+    border-radius:10px;
+}
+
+.rangeslider {
+	position:relative;
+    margin: 10px auto;
+}
+.rangeslider:after{
+    top:50%;
+    left:0;
+    right:0;
+    content:'';
+    width:100%;
+    height:5px;
+    margin-top:-2.5px;
+    border-radius:5px;
+    position:absolute;
+    background:#3498db;
+}
+
+.rangeslider--horizontal{
+    width:100%;
+    height:28px;
+}
+
+.rangeslider--vertical{
+    width:5px;
+    min-height:150px;
+    max-height:100%;
+}
+.rangeslider--disabled{
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity:0.4;
+}
+
+.rangeslider__fill{
+    position:absolute;
+    background:#64c832;
+}
+.rangeslider--horizontal .rangeslider__fill{
+    top:0;
+    height:100%;
+}
+.rangeslider--vertical .rangeslider__fill{
+    bottom:0;
+    width:100%;
+}
+
+.rangeslider__handle{
+    top:50%;
+    width:28px;
+    height:28px;
+    cursor:pointer;
+    margin-top:-14px;
+    background:white;
+    position:absolute;
+    background:#64c832;
+    border: 3px solid #fff;
+    border-radius:50% !important;
+    display:inline-block;
+}
+.rangeslider__handle:active{
+    background:#64c832;
+}
+
+.rangeslider__fill,
+.rangeslider__handle{
+    z-index:1;
+}
+.rangeslider--horizontal .rangeslider__fill{
+    top:50%;
+    height:5px;
+    margin-top:-2.5px;
+}
+
+
+/* =====
+Calculate Settlement Button
+========*/
+#calculate-settlement {
+    display: block;
+    padding: 10px;
+    font-size: 22px;
+    margin: 20px auto 30px;
+    background: #ff9600;
+    border-radius: 15% !important;
+}
+
+/* =====
+Calculate Settlement Result
+========*/
+#EstimateResult .worth-between {
+    font-size: 20px;
+}
+
+#EstimateResult label#low, 
+#EstimateResult label#high {
+    display: block;
+    font-size: 50px;
+    color: green;
+    padding: 20px;
+}
+
+ @media screen and (min-width: 320px) {
+    #EstimateResult label#low, 
+    #EstimateResult label#high {
+        display: block;
+        font-size: 40px;
+        color: green;
+        padding: 0;
+    }
+    #EstimateResult label#low {
+        margin-bottom: 10px;
+    }
+    #EstimateResult label#high {
+        margin-top: 10px;
+    }
+
+} 
+ @media screen and (min-width: 400px) {
+    #EstimateResult label#low, 
+    #EstimateResult label#high {
+        font-size: 50px;
+    }
+} 
+
+ @media screen and (min-width: 711px) {
+    #EstimateResult label#low, 
+    #EstimateResult label#high {
+        display: inline;
+    }
+} 
